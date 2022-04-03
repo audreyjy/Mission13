@@ -20,6 +20,8 @@ namespace Mission13.Models
         public string BowlerZip { get; set; }
         public string BowlerPhoneNumber { get; set; }
         public int TeamID { get; set; }
+        // foreign key relationship 
+        public Team Team { get; set; }
 
     }
 }

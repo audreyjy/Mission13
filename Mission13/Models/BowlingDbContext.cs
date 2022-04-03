@@ -14,17 +14,7 @@ namespace Mission13.Models
         }
 
         public DbSet<Bowler> Bowlers { get; set; }
-
-
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder.UseMySql("server=localhost; port=3306; database=bowlingleagueexample; user=root; password=goldfish!32",
-        //            builder => builder.EnableRetryOnFailure());
-
-        //    }
-        //}
+        public DbSet<Team> Teams { get; set; }
 
     }
 }

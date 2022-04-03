@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+
+
+
+<div class="d-grid gap-2">
+
+    <a asp-controller="Home" asp-action="ListBowlers" class="btn btn-outline-secondary btn-block">Home</a>
+
+    @foreach (string t in Model) // t for "teams" :)
+    {
+        <a asp-controller="Home" asp-action="ListBowlers" asp-route-bowlerTeam="@t"
+           class="btn btn-block @(ViewBag.SelectedType == t ? "btn-primary btn-focus " : "btn btn-outline-secondary btn-focus")">@t</a>
+    }
+
+</div>

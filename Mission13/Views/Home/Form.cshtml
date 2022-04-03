@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Bowler
+
+<a>Add a bolwer to the list!</a>
+
+<form method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <!-- add something here like action="?"-->
+    <label asp-for="BowlerFirstName">First Name:</label>
+    <input asp-for="BowlerFirstName" />
+    <br />
+
+    <label asp-for="BowlerMiddleInit">Middle Initial:</label>
+    <input asp-for="BowlerMiddleInit" />
+    <br />
+
+    <label asp-for="BowlerLastName">Last Name:</label>
+    <input asp-for="BowlerLastName" />
+    <br />
+
+    <label asp-for="BowlerAddress">Address Line 1:</label>
+    <input asp-for="BowlerAddress" />
+    <br />
+
+    <label asp-for="BowlerCity">City:</label>
+    <input asp-for="BowlerCity" />
+    <br />
+
+    <label asp-for="BowlerState">State:</label>
+    <input asp-for="BowlerState" />
+    <br />
+
+    <label asp-for="BowlerZip">Zipcode:</label>
+    <input asp-for="BowlerZip" />
+    <br />
+
+    <label asp-for="BowlerPhoneNumber">Phone:</label>
+    <input asp-for="BowlerPhoneNumber" />
+    <br />
+
+    <label asp-for="TeamID">Team</label><!--asp-for commands allow connection to my models-->
+    <select asp-for="TeamID">
+        <option value="">Select a Team Name</option>
+        @foreach (Team t in ViewBag.Team) //make loop
+        {
+            <option value="@t.TeamID">@t.TeamName</option>
+        }
+    </select><br /><br />
+    <button value="submit" type="submit">Submit</button>
+</form>
+
+
